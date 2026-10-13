@@ -1,0 +1,58 @@
+/* 화면 크기 */
+
+@media (min-width: 901px) {
+  /* 프로필 */
+  .lineup-section .lineup-controls {
+    top: min(990px, calc(var(--visible-canvas-height, 1080px) - 66px));
+    font-size: 14px;
+  }
+  .lineup-section .replay-intro {
+    color: #123d86;
+    background: #fff;
+    border: 1px solid #123d8640;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-weight: 650;
+    letter-spacing: .03em;
+  }
+  .lineup-section .replay-intro:hover,
+  .lineup-section .replay-intro:focus-visible {
+    background: #e9f2ff;
+    color: #0b42aa;
+  }
+
+  /* 스크롤 */
+  .lineup-section .lineup-sticky {
+    height: 100vh;
+    height: 100dvh;
+  }
+  .lineup-scroll-area {
+    height: calc(100vh + var(--lineup-travel, 0px));
+    height: calc(100dvh + var(--lineup-travel, 0px));
+  }
+
+  /* 프로젝트 */
+  .project-section,
+  .contact {
+    height: 100vh;
+    height: 100dvh;
+    min-height: 100vh;
+    min-height: 100dvh;
+    max-height: 100vh;
+    max-height: 100dvh;
+    overflow: hidden;
+  }
+}
+
+/* 반응형 */
+
+@media (max-width: 900px) {
+  .lineup-section.lineup-ready .replay-intro {
+    color: #0b42aa;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 8px 11px;
+    border: 1px solid rgba(11, 66, 170, .3);
+    border-radius: 4px;
+  }
+}

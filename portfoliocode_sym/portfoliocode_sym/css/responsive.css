@@ -1,0 +1,528 @@
+/* 반응형 */
+
+@media (max-width:900px) {
+  .desktop-layout {
+    width: 100%;
+    height: auto;
+    min-height: 100svh;
+    transform: none;
+    background: var(--gradient);
+  }
+  .project-section,
+  .lineup-section {
+    height: auto;
+    min-height: 100svh;
+  }
+  .project-background {
+    left: 10%;
+    top: 0;
+    width: 1000px;
+    height: 1000px;
+  }
+  .back-button,
+  .project-section[data-category=logo] .back-button,
+  .project-section[data-category=app] .back-button {
+    position: relative;
+    left: auto;
+    top: auto;
+    margin: 25px 5%;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: -.7px;
+  }
+  .back-button img {
+    width: 21px;
+    height: 15px;
+  }
+  .project-grid,
+  .project-section[data-category=web] .project-grid,
+  .project-section[data-category=logo] .project-grid,
+  .project-section[data-category=app] .project-grid {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: 90%;
+    height: auto;
+    margin: 0 5%;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: none;
+    gap: 18px;
+  }
+  .project-card {
+    aspect-ratio: 510/313;
+    border-radius: 14px;
+  }
+  .project-section[data-category=web] .project-card,
+  .project-section[data-category=logo] .project-card,
+  .project-section[data-category=app] .project-card {
+    aspect-ratio: 492/670;
+  }
+  .project-info {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: 90%;
+    margin: 30px 5% 0;
+    padding-bottom: 55px;
+  }
+  .project-title {
+    font-size: 28px;
+    line-height: 40px;
+    height: 48px;
+    margin: 0;
+  }
+  .title-line {
+    left: 0;
+    top: 45px;
+    width: 100%;
+    height: 3px;
+  }
+  .info-box {
+    height: auto;
+    min-height: 300px;
+    padding: 25px 22px 35px;
+    margin-top: 18px;
+    border-radius: 20px;
+  }
+  .info-content h2 {
+    font-size: clamp(21px, 3.9vw, 32px);
+    letter-spacing: -.8px;
+  }
+  .info-line {
+    width: 100%;
+    height: 3px;
+    margin: 6px 0 20px;
+  }
+  .info-content dl,
+  .info-content p,
+  .info-content .detail-links {
+    font-size: 14px;
+  }
+  .info-content .detail-title {
+    font-size: 28px;
+  }
+  .mini-field {
+    margin: 20px auto 0;
+    transform: scale(var(--tactics-scale, 1));
+    transform-origin: top center;
+    margin-bottom: var(--tactics-margin, 0px);
+  }
+  .soccer-field {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: 90%;
+    height: 55vw;
+    margin: 25px 5%;
+  }
+  .field-image {
+    width: 100%;
+    height: 100%;
+  }
+  .soccer-field button {
+    width: 16%;
+    height: 20%;
+    border-radius: 10px;
+    font-size: clamp(9px, 2vw, 18px);
+    line-height: 1.2;
+  }
+  .lineup-title {
+    position: relative;
+    left: auto;
+    top: auto;
+    padding: 30px 5% 0;
+  }
+  .lineup-title small {
+    font-size: 13px;
+  }
+  .lineup-title h1 {
+    font-size: 26px;
+    margin-top: 8px;
+  }
+  .profile {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: 100%;
+    height: auto;
+    padding: 35px 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    align-items: start;
+  }
+  .profile h2 {
+    font-size: 25px;
+    grid-column: 1/-1;
+    margin: 0;
+    grid-row: 2;
+  }
+  .profile-info {
+    margin: 15px 0;
+    font-size: 12px;
+    grid-column: 1;
+  }
+  .profile-image {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    grid-column: 2;
+    grid-row: 3/5;
+  }
+  .profile-birthday {
+    font-size: 12px;
+    margin: 0;
+    grid-column: 1;
+  }
+  .logo-piece:first-child {
+    left: -22.154%;
+    top: -3.433%;
+    width: 197.358%;
+    height: 49.254%;
+  }
+  .logo-piece:nth-child(2) {
+    left: -30.894%;
+    top: 50%;
+    width: 223.78%;
+    height: 51.791%;
+  }
+  .contact {
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
+  .contact-label {
+    margin-bottom: 35px;
+  }
+  .contact-links {
+    gap: 25px;
+    margin-top: 45px;
+  }
+  .contact-item h2 {
+    font-size: 11px;
+    letter-spacing: 1px;
+  }
+  .contact-item div {
+    font-size: 13px;
+  }
+  .contact-title h1 {
+    font-size: 6.7vw;
+  }
+  .contact footer {
+    font-size: 8px;
+  }
+}
+
+@media (max-width:900px) {
+  .mini-field {
+    transform-origin: top left;
+  }
+}
+
+@media (max-width:500px) {
+  .project-grid {
+    gap: 12px;
+  }
+  .contact-links {
+    grid-template-columns: 1fr;
+    gap: 0;
+    width: 85%;
+    margin-top: 35px;
+  }
+  .contact-item {
+    padding: 14px 0;
+  }
+  .contact-item h2 {
+    margin-bottom: 6px;
+  }
+  .info-content h2 {
+    font-size: 21px;
+  }
+  .info-content .detail-title {
+    font-size: 25px;
+  }
+  .info-box {
+    padding: 22px 18px 36px;
+  }
+  .contact-title h1 {
+    font-size: 6.7vw;
+  }
+  .soccer-field {
+    height: 65vw;
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  *,
+  *:before,
+  *:after {
+    transition: none !important;
+  }
+}
+
+@media (max-width:900px) {
+  body.intro-active {
+    overflow: hidden;
+  }
+  .skip-button {
+    right: 20px;
+    top: 20px;
+  }
+  .intro-name {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 25px;
+    padding: 0 8vw;
+  }
+  .intro-name strong {
+    font-size: 19vw;
+  }
+  .intro-name span {
+    font-size: 11px;
+  }
+  .lineup-sticky {
+    height: auto;
+    min-height: 100svh;
+    overflow: visible;
+    padding-bottom: 0;
+  }
+  .lineup-big-title {
+    font-size: 17vw;
+    white-space: normal;
+    padding: 8vw;
+  }
+  .lineup-section .desktop-layout,
+  .project-section .desktop-layout {
+    left: auto;
+    transform: none;
+  }
+  .lineup-section .desktop-layout:after {
+    display: none;
+  }
+  .view-buttons {
+    left: auto;
+    right: 5%;
+    top: 25px;
+    transform: scale(.85);
+    transform-origin: top right;
+  }
+  .lineup-board {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: 90%;
+    height: 58vw;
+    min-height: 275px;
+    margin: 24px 5% 0;
+  }
+  .soccer-field {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+  .soccer-field .lineup-card {
+    width: 16.06%;
+    height: 19.52%;
+    border-radius: 10px;
+  }
+  .design-card {
+    left: 17.06% !important;
+    top: 12.86% !important;
+  }
+  .logo-card {
+    left: 66.79% !important;
+    top: 12.86% !important;
+  }
+  .clone-card {
+    left: 41.92% !important;
+    top: 40.03% !important;
+  }
+  .web-card {
+    left: 17.06% !important;
+    top: 53.9% !important;
+  }
+  .app-card {
+    left: 66.79% !important;
+    top: 53.9% !important;
+  }
+  .contact-card {
+    left: 41.92% !important;
+    top: 70.81% !important;
+  }
+  .list-mode {
+    padding: 3vw 5vw;
+  }
+  .list-mode button {
+    font-size: clamp(18px, 5vw, 34px);
+    gap: 20px;
+  }
+  .lineup-section .profile {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: 100%;
+    height: 710px;
+    border-radius: 52px 52px 0 0;
+    margin-top: 35px;
+  }
+  .lineup-section .profile-flip {
+    height: 710px;
+  }
+  .profile-side {
+    padding: 55px 0 0 8%;
+  }
+  .profile-front h2 {
+    font-size: clamp(35px, 8vw, 55px);
+  }
+  .profile-front .profile-info {
+    margin-top: 48px;
+    font-size: 16px;
+  }
+  .profile-front .profile-image {
+    width: min(300px, 70vw);
+    height: 386px;
+  }
+  .profile-front .profile-birthday {
+    font-size: 16px;
+  }
+  .profile-skills {
+    padding: 70px 7%;
+  }
+  .profile-skills h2 {
+    font-size: 52px;
+    margin-bottom: 35px;
+  }
+  .skills-list {
+    max-width: 430px;
+  }
+  .profile-skills>p {
+    left: 7%;
+    bottom: 42px;
+  }
+  .lineup-scroll {
+    height: auto !important;
+  }
+  .contact-title h1 {
+    font-size: 6.7vw;
+  }
+}
+
+@media (max-width:500px) {
+  .lineup-board {
+    height: 65vw;
+    min-height: 250px;
+  }
+  .lineup-section .profile,
+  .lineup-section .profile-flip {
+    height: 670px;
+  }
+  .profile-front .profile-image {
+    height: 350px;
+    width: 272px;
+  }
+  .profile-skills {
+    padding-top: 58px;
+  }
+  .skills-list {
+    gap: 8px;
+  }
+  .skills-list span {
+    font-size: 11px;
+    border-radius: 11px;
+  }
+  .list-mode button {
+    font-size: 19px;
+  }
+  .view-buttons {
+    top: 20px;
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .profile-flip,
+  .board-flip {
+    transition: none !important;
+  }
+}
+
+@media (max-width:900px) {
+  .lineup-section .profile {
+    background: linear-gradient(156.7825deg, #0b42aa 0%, #171e2c 107.36%);
+  }
+}
+
+/* 반응형 */
+
+@media (max-width: 900px) {
+  .lineup-section .lineup-sticky {
+    position: sticky;
+    top: 0;
+    height: 100svh;
+    min-height: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  .lineup-section .desktop-layout {
+    min-height: 100svh;
+  }
+
+  /* 프로필 */
+  .lineup-section .desktop-layout .profile {
+    display: none;
+  }
+  .lineup-section .profile.mobile-profile {
+    display: block;
+    position: relative;
+    left: auto;
+    top: auto;
+    width: 100%;
+    height: 710px;
+    margin: 0;
+    border-radius: 40px 40px 0 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  .lineup-section .mobile-profile .profile-flip {
+    height: 710px;
+  }
+  .lineup-intro-content {
+    width: 92vw;
+  }
+  .lineup-intro-content h2 {
+    font-size: clamp(54px, 13vw, 115px);
+  }
+  .lineup-eyebrow {
+    margin-bottom: 20px;
+    font-size: 10px;
+    letter-spacing: .08em;
+  }
+  .lineup-intro-content p {
+    margin-top: 20px;
+    font-size: 10px;
+    letter-spacing: .07em;
+  }
+  .lineup-scroll-hint {
+    bottom: 85px;
+    font-size: 10px;
+  }
+  .lineup-progress {
+    right: 5%;
+    bottom: 16px;
+    width: 51%;
+  }
+  .lineup-progress-text {
+    font-size: 8px;
+    letter-spacing: .03em;
+  }
+  .lineup-skip {
+    right: 5%;
+    top: 19px;
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 500px) {
+  .lineup-section .profile.mobile-profile,
+  .lineup-section .mobile-profile .profile-flip {
+    height: 670px;
+  }
+}

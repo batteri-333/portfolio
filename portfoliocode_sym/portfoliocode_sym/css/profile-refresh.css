@@ -1,0 +1,269 @@
+/* 프로필 */
+.lineup-section .profile {
+  cursor: default;
+  perspective: none;
+}
+
+.lineup-section .profile-front.profile-static {
+  position: relative;
+  inset: auto;
+  width: 603px;
+  height: 1080px;
+  padding: 0;
+  backface-visibility: visible;
+  transform: scale(var(--profile-content-scale,1));
+  transform-origin: 126px 0;
+  color: #fff;
+}
+
+.lineup-section .profile-front.profile-static > * {
+  position: absolute;
+  margin: 0;
+}
+
+.lineup-section .profile-front.profile-static::after {
+  content: none !important;
+  display: none !important;
+}
+
+.lineup-section .profile-front .flag {
+  left: 129px;
+  top: 110px;
+  width: 43.268px;
+  height: 28.868px;
+  object-fit: cover;
+}
+
+.lineup-section .profile-front h2 {
+  left: 126px;
+  top: 150px;
+  width: 315px;
+  margin: 0;
+  font: 700 55px/1.15 Inter,PlexKR,sans-serif;
+  letter-spacing: -1.4px;
+  white-space: normal;
+}
+
+.lineup-section .profile-front .profile-rule {
+  left: 117px;
+  top: 290px;
+  width: 332px;
+  height: 1px;
+  background: #fff;
+  opacity: 1;
+  transform: none;
+}
+
+.lineup-section .profile-front .profile-portrait {
+  left: 126px;
+  top: 308px;
+  width: 300px;
+  height: 389px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.lineup-section .profile-front .profile-portrait .profile-image {
+  position: absolute;
+  inset: 0;
+  width: 300px;
+  height: 389px;
+  margin: 0;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.lineup-section .profile-front .profile-birthday {
+  left: 126px;
+  top: 702px;
+  margin: 0;
+  font: 700 20px/1.35 Inter,PlexKR,sans-serif;
+  white-space: nowrap;
+}
+
+.lineup-section .profile-front .profile-birthday span {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.lineup-section .profile-front .profile-education {
+  left: 126px;
+  top: 742px;
+  width: 470px;
+  display: grid;
+  grid-template-columns: 116px 1fr;
+  align-items: start;
+}
+
+.lineup-section .profile-education strong,.lineup-section .profile-tools strong {
+  font: 700 20px/1.25 Inter,PlexKR,sans-serif;
+}
+
+.lineup-section .profile-education ul {
+  margin: 0;
+  padding: 0 0 0 22px;
+  list-style: disc;
+  color: #fff;
+  font: 500 16px/1.22 Inter,PlexKR,sans-serif;
+}
+
+.lineup-section .profile-education li {
+  padding: 0;
+  margin: 0 0 4px;
+}
+
+.lineup-section .profile-education li span {
+  display: block;
+  white-space: nowrap;
+}
+
+.lineup-section .profile-front .profile-tools {
+  left: 126px;
+  top: 919px;
+  width: 430px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.lineup-section .profile-icons {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  height: 42px;
+  white-space: nowrap;
+}
+
+.lineup-section .profile-icons img {
+  display: block;
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+  flex: 0 0 auto;
+}
+
+.lineup-section .profile-icons img:nth-child(3) {
+  width: 34px;
+  height: 34px;
+}
+
+/* 반응형 */
+
+@media (max-width:900px) {
+  .lineup-section .profile.mobile-profile {
+    height: auto !important;
+    min-height: 0 !important;
+    border-radius: 40px 40px 0 0;
+    overflow: visible;
+    padding: 0 0 42px;
+  }
+  .lineup-section .mobile-profile .profile-front.profile-static {
+    position: relative;
+    width: 100%;
+    height: auto;
+    transform: none;
+    transform-origin: top left;
+    padding: 35px 8% 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .lineup-section .mobile-profile .profile-front.profile-static > * {
+    position: static !important;
+  }
+  .lineup-section .mobile-profile .profile-front .flag {
+    width: 38px;
+    height: 25px;
+    object-fit: cover;
+  }
+  .lineup-section .mobile-profile .profile-front h2 {
+    font-size: clamp(36px,10vw,52px);
+    line-height: 1.08;
+    letter-spacing: -1.3px;
+    width: auto;
+    margin: 14px 0 0;
+  }
+  .lineup-section .mobile-profile .profile-front .profile-rule {
+    display: block;
+    width: min(360px,100%);
+    height: 1px;
+    margin: 16px 0 16px;
+    transform: none;
+  }
+  .lineup-section .mobile-profile .profile-front .profile-portrait {
+    width: min(300px,100%);
+    height: auto;
+    aspect-ratio: 300/389;
+    background: #fff;
+    overflow: hidden;
+  }
+  .lineup-section .mobile-profile .profile-front .profile-portrait .profile-image {
+    position: static;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .lineup-section .mobile-profile .profile-front .profile-birthday {
+    font-size: 17px;
+    line-height: 1.35;
+    margin: 12px 0 18px;
+  }
+  .lineup-section .mobile-profile .profile-front .profile-birthday span {
+    font-size: 15px;
+  }
+  .lineup-section .mobile-profile .profile-front .profile-education {
+    display: grid;
+    grid-template-columns: 102px minmax(0,1fr);
+    gap: 5px;
+    width: 100%;
+    margin: 0 0 18px;
+  }
+  .lineup-section .mobile-profile .profile-education strong,.lineup-section .mobile-profile .profile-tools strong {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+  .lineup-section .mobile-profile .profile-education ul {
+    font-size: 13px;
+    line-height: 1.38;
+    padding-left: 15px;
+  }
+  .lineup-section .mobile-profile .profile-education li {
+    margin-bottom: 5px;
+    overflow-wrap: anywhere;
+  }
+  .lineup-section .mobile-profile .profile-education li span {
+    white-space: normal;
+  }
+  .lineup-section .mobile-profile .profile-front .profile-tools {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  .lineup-section .mobile-profile .profile-icons {
+    height: auto;
+    gap: 6px;
+    max-width: calc(100% - 88px);
+    flex-wrap: wrap;
+  }
+  .lineup-section .mobile-profile .profile-icons img {
+    width: 31px;
+    height: 31px;
+  }
+}
+
+@media (max-width:380px) {
+  .lineup-section .mobile-profile .profile-front.profile-static {
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+  .lineup-section .mobile-profile .profile-front .profile-education {
+    grid-template-columns: 88px minmax(0,1fr);
+  }
+  .lineup-section .mobile-profile .profile-education strong {
+    font-size: 14px;
+  }
+  .lineup-section .mobile-profile .profile-education ul {
+    font-size: 12px;
+  }
+}

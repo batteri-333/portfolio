@@ -1,0 +1,134 @@
+/* 라인업 보정 */
+
+/* 인트로 */
+.lineup-section .lineup-controls {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity .18s ease, visibility 0s linear .18s;
+}
+
+.lineup-section.lineup-ready .lineup-controls {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition: opacity .4s ease .2s, visibility 0s linear .2s;
+}
+
+/* 포메이션 */
+.lineup-section .lineup-progress {
+  display: none !important;
+}
+
+/* 포커스 */
+.lineup-section .profile-icons {
+  overflow: visible;
+}
+
+.lineup-section .profile-icons .skill-item {
+  position: relative;
+  display: inline-flex;
+  width: 34px;
+  height: 38px;
+  flex: 0 0 34px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  cursor: default;
+  isolation: isolate;
+  outline-offset: 3px;
+}
+
+.lineup-section .profile-icons .skill-item img {
+  display: block;
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+/* 위쪽 말풍선 + 삼각형 꼬리 */
+.lineup-section .profile-icons .skill-item::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  z-index: 35;
+  bottom: calc(100% + 11px);
+  left: 50%;
+  transform: translate(-50%,5px);
+  background: #fff;
+  color: #103d83;
+  border: 1px solid rgba(10,47,102,.12);
+  box-shadow: 0 5px 18px rgba(0,14,49,.2);
+  border-radius: 6px;
+  padding: 7px 10px;
+  font: 600 12px/1.35 Inter,PlexKR,sans-serif;
+  letter-spacing: 0;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity .18s ease,transform .18s ease,visibility 0s linear .18s;
+}
+
+.lineup-section .profile-icons .skill-item::after {
+  content: '';
+  position: absolute;
+  z-index: 35;
+  bottom: calc(100% + 4px);
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 7px 6px 0;
+  border-style: solid;
+  border-color: #fff transparent transparent;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity .18s ease,visibility 0s linear .18s;
+}
+
+.lineup-section .profile-icons .skill-item:hover::before,
+.lineup-section .profile-icons .skill-item:focus-visible::before {
+  transform: translate(-50%,0);
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0s;
+}
+
+.lineup-section .profile-icons .skill-item:hover::after,
+.lineup-section .profile-icons .skill-item:focus-visible::after {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0s;
+}
+
+.lineup-section .profile-icons .skill-item:hover,
+.lineup-section .profile-icons .skill-item:focus-visible {
+  z-index: 40;
+}
+
+.lineup-section .profile-icons .skill-item:focus-visible {
+  outline: 2px solid #b4d8ff;
+}
+
+@media (max-width:900px) {
+  .lineup-section .mobile-profile .profile-icons .skill-item {
+    width: 31px;
+    height: 35px;
+    flex-basis: 31px;
+  }
+  .lineup-section .mobile-profile .profile-icons .skill-item img {
+    width: 31px;
+    height: 31px;
+  }
+  .lineup-section .mobile-profile .profile-icons .skill-item::before {
+    font-size: 11px;
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .lineup-section .lineup-controls,
+ .lineup-section .profile-icons .skill-item::before,
+ .lineup-section .profile-icons .skill-item::after {
+    transition: none !important;
+  }
+}

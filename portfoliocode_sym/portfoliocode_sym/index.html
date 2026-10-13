@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="서영민 프로젝트 포트폴리오">
+  <title>SEO YEONGMIN — Portfolio</title>
+  <link rel="icon" href="images/soccer-ball-small.png">
+  <meta name="robots" content="All">
+    <meta name="Yeti" content="index, follow">
+    <meta name="Yeti" content="All">
+    <meta name="googlebot" content="All">
+    <meta name="googlebot" content="index, follow">
+    <meta name="daum" content="All">
+    <meta name="daum" content="index, follow">
+    <meta name="title" content="SEO YEONGMIN_MATCH DAY">
+    <meta name="description" content="생각을 기획으로, 기획을 경험으로. 서영민 포트폴리오">
+    <meta name="keywords" content="서영민, 포트폴리오, 웹디자인, 웹개발, UIUX, 마케팅">
+    <meta name="author" content="서영민">
+    <meta name="content-language" content="kr">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="서영민 포트폴리오">
+    <meta property="og:title" content="서영민 포트폴리오">
+    <meta property="og:description" content="생각을 기획으로, 기획을 경험으로. 서영민 포트폴리오">
+    <meta property="og:image" content="images/figma/47deb.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+  <!-- 스타일 파일 -->
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/refinements.css">
+  <link rel="stylesheet" href="css/viewport-fit.css">
+  <link rel="stylesheet" href="css/lineup-polish.css">
+  <link rel="stylesheet" href="css/lineup-morph.css">
+  <link rel="stylesheet" href="css/profile-refresh.css">
+  <link rel="stylesheet" href="css/lineup-final-polish.css">
+  <link rel="stylesheet" href="css/lineup-interactions.css">
+  <link rel="stylesheet" href="css/lineup-about.css">
+  <link rel="stylesheet" href="css/lineup-tactics.css">
+  <link rel="stylesheet" href="css/profile-spacing.css">
+  <link rel="stylesheet" href="css/project-detail-clean.css">
+  <link rel="stylesheet" href="css/intro-video.css">
+
+  <!-- 라이브러리 -->
+  <script defer src="lib/jquery.min.js"></script>
+  <script defer src="lib/gsap.min.js"></script>
+
+  <!-- 스크립트 -->
+  <script defer src="js/data.js"></script>
+  <script defer src="js/reports.js"></script>
+  <script defer src="js/animation.js"></script>
+  <script defer src="js/script.js"></script>
+</head>
+
+<body class="intro-active">
+  <a class="skip-content" href="#lineup">라인업 바로 보기</a>
+
+  <!-- 인트로 -->
+  <section id="intro" class="intro" role="dialog" aria-modal="true" aria-label="포트폴리오 인트로">
+    <button type="button" class="skip-button" aria-label="인트로 건너뛰기">
+      <span class="skip-button-label">SKIP INTRO</span>
+      <span class="skip-button-arrows" aria-hidden="true">
+        <svg viewBox="0 0 32 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="square"
+          stroke-linejoin="miter" focusable="false">
+          <path d="m8 5 8 7-8 7 M18 5l8 7-8 7" />
+        </svg>
+      </span>
+    </button>
+
+    <!-- 영상 인트로 -->
+    <div class="intro-screen intro-video-screen">
+      <!-- 영상 화면 -->
+      <div class="intro-video-canvas">
+        <video class="intro-video" playsinline webkit-playsinline muted preload="auto"
+          poster="images/intro-video-poster.jpg" aria-label="축구 경기장 인트로 영상">
+          <source src="videos/football-intro.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <div class="intro-screen intro-logo-screen intro-video-logo" aria-hidden="true">
+      <div class="intro-video-shade"></div>
+      <div class="intro-name">
+        <div class="sym-logo"><img src="images/figma/47deb.png" alt="S·Y·M"></div><span>PORTFOLIO<br>ARCHIVE</span>
+      </div>
+    </div>
+    <!-- 음소거 버튼 -->
+    <button type="button" class="intro-sound-toggle" aria-label="인트로 영상 소리 켜기" aria-pressed="false" title="소리 켜기">
+      <svg class="intro-sound-icon icon-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M11 5 6.5 9H3.5v6h3L11 19V5Z" />
+        <path d="m16 9 5 6m0-6-5 6" />
+      </svg>
+      <svg class="intro-sound-icon icon-unmuted" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M11 5 6.5 9H3.5v6h3L11 19V5Z" />
+        <path d="M15 9a4 4 0 0 1 0 6" />
+        <path d="M18 6a8 8 0 0 1 0 12" />
+      </svg>
+    </button>
+  </section>
+
+  <main>
+    <!-- STARTING LINEUP -->
+    <section id="lineup" class="lineup-section lineup-scroll" aria-label="포트폴리오 라인업">
+      <!-- 스크롤 영역 -->
+      <div class="lineup-scroll-area">
+        <div class="lineup-sticky">
+          <div class="lineup-white-screen" aria-hidden="true"></div>
+          <div class="lineup-big-title">
+            <!-- SVG 전술판 -->
+            <svg class="lineup-tactics-svg" viewBox="0 0 1600 960" preserveAspectRatio="xMidYMid slice"
+              aria-hidden="true" focusable="false">
+              <g class="tactics-frame">
+                <rect class="tactic-draw tactic-outline" x="24" y="24" width="1552" height="896" rx="13" />
+                <path class="tactic-draw tactic-structure" d="M800 24 V920" />
+                <circle class="tactic-draw tactic-structure" cx="800" cy="455" r="193" />
+                <path class="tactic-draw tactic-structure"
+                  d="M24 271 H159 Q180 271 180 292 V620 Q180 640 159 640 H24" />
+                <path class="tactic-draw tactic-structure" d="M24 363 H86 Q102 363 102 379 V532 Q102 549 86 549 H24" />
+                <path class="tactic-draw tactic-structure" d="M180 362 A94 94 0 0 1 180 548" />
+                <path class="tactic-draw tactic-structure"
+                  d="M1576 271 H1441 Q1420 271 1420 292 V620 Q1420 640 1441 640 H1576" />
+                <path class="tactic-draw tactic-structure"
+                  d="M1576 363 H1514 Q1498 363 1498 379 V532 Q1498 549 1514 549 H1576" />
+                <path class="tactic-draw tactic-structure" d="M1420 362 A94 94 0 0 0 1420 548" />
+                <path class="tactic-draw tactic-structure"
+                  d="M24 64 Q67 62 67 24 M1533 24 Q1534 65 1576 65 M24 879 Q67 881 67 920 M1533 920 Q1534 877 1576 877" />
+                <circle class="tactic-draw tactic-structure" cx="142" cy="455" r="4" />
+                <circle class="tactic-draw tactic-structure" cx="1458" cy="455" r="4" />
+              </g>
+              <g class="tactics-movement">
+                <path class="tactic-draw tactic-route" d="M487 171 H333 C286 171 262 211 262 255 V281" />
+                <path class="tactic-draw tactic-arrow" d="M250 267 L262 281 L275 267" />
+                <path class="tactic-draw tactic-route"
+                  d="M961 117 V216 C961 259 986 281 1028 281 H1250 C1276 281 1290 302 1290 328 V393" />
+                <path class="tactic-draw tactic-arrow" d="M1277 380 L1290 393 L1303 380" />
+                <path class="tactic-draw tactic-route route-dash" d="M287 599 L378 696" />
+                <path class="tactic-draw tactic-arrow" d="M363 695 L378 696 L378 680" />
+                <path class="tactic-draw tactic-route"
+                  d="M749 811 H1080 C1114 811 1132 798 1132 762 V753 C1132 716 1149 696 1185 696" />
+                <path class="tactic-draw tactic-route route-dash" d="M1185 696 H1310" />
+                <path class="tactic-draw tactic-arrow" d="M1297 684 L1310 696 L1297 709" />
+              </g>
+              <g class="tactics-marks">
+                <path class="tactic-draw tactic-mark" d="M506 158 L530 184 M530 158 L506 184" />
+                <path class="tactic-draw tactic-mark" d="M948 74 L974 101 M974 74 L948 101" />
+                <path class="tactic-draw tactic-mark" d="M1277 411 L1303 436 M1303 411 L1277 436" />
+                <path class="tactic-draw tactic-mark" d="M251 558 L276 585 M276 558 L251 585" />
+                <path class="tactic-draw tactic-mark" d="M552 628 L576 654 M576 628 L552 654" />
+                <path class="tactic-draw tactic-mark" d="M704 799 L729 826 M729 799 L704 826" />
+                <path class="tactic-draw tactic-mark" d="M1328 685 L1354 710 M1354 685 L1328 710" />
+                <path class="tactic-draw tactic-mark" d="M124 744 L149 771 M149 744 L124 771" />
+                <circle class="tactic-draw tactic-mark" cx="263" cy="311" r="14" />
+                <circle class="tactic-draw tactic-mark" cx="1022" cy="225" r="14" />
+                <circle class="tactic-draw tactic-mark" cx="1339" cy="177" r="14" />
+                <circle class="tactic-draw tactic-mark" cx="1256" cy="318" r="14" />
+                <circle class="tactic-draw tactic-mark" cx="403" cy="716" r="14" />
+                <circle class="tactic-draw tactic-mark" cx="1085" cy="763" r="14" />
+              </g>
+            </svg>
+            <div class="lineup-intro-content">
+              <span class="lineup-eyebrow">SEO YEONGMIN / PORTFOLIO STARTING VI</span>
+              <h2><span>PROJECT</span><span>LINEUP</span></h2>
+              <p>PROJECT LINEUP · SIX CREATIVE POSITIONS</p>
+            </div>
+            <div class="lineup-scroll-hint" role="note" aria-label="SCROLL, 아래로 스크롤하세요">
+              <svg class="lineup-scroll-mouse" viewBox="0 0 28 38" fill="none" aria-hidden="true" focusable="false">
+                <rect x="5" y="2" width="18" height="29" rx="9" stroke="currentColor" stroke-width="1.8" />
+                <path d="M14 9v7" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" />
+              </svg>
+              <span class="lineup-scroll-label">SCROLL</span>
+              <svg class="lineup-scroll-arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                <path d="M12 3v15m-6-6 6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+            <!-- ABOUT ME 사진 -->
+            <div class="lineup-about" aria-label="서영민 소개">
+              <div class="lineup-about-media">
+                <div class="lineup-about-photo">
+                  <img src="images/profile-photo.png" alt="서영민 증명사진">
+                </div>
+              </div>
+              <div class="lineup-about-copy">
+                <span class="lineup-about-eyebrow">ABOUT SEO YEONGMIN</span>
+                <h2>흐름을 읽고,<br>다음 플레이를 설계합니다.</h2>
+                <p>경기에서 중요한 건 공을 차는 순간만이 아니듯이,<br>저는 문제의 흐름을 읽고, 해결 방향을 기획하며<br
+                    class="lineup-about-desktop-break"> 디자인과 개발을 통해 아이디어를 실제 결과물로 연결합니다.</p>
+                <span class="lineup-about-tags">PLANNING — DESIGN — DEVELOPMENT</span>
+              </div>
+            </div>
+          </div>
+          <!-- 라인업 SKIP -->
+          <button type="button" class="lineup-skip">SKIP LINEUP ↗</button>
+
+          <!-- PC 라인업 -->
+          <div class="desktop-layout">
+            <div class="lineup-title">
+              <small>STARTING Ⅵ</small>
+              <h1>PROJECT LINEUP</h1>
+            </div>
+
+            <!-- FORMATION · LIST -->
+            <div class="view-buttons" aria-label="보기 방식"><button class="view-button" data-view="list"
+                aria-label="리스트 보기" aria-pressed="false"><img src="images/figma/67617.svg" alt=""></button></div>
+            <!-- 포메이션 / 리스트 -->
+            <div class="lineup-board">
+              <div class="board-flip">
+                <div class="formation-view">
+                  <div class="soccer-field">
+                    <img class="field-image" src="images/formation-field.svg" alt="">
+                    <nav aria-label="포트폴리오 카테고리">
+                      <button class="lineup-card design-card" data-category="design" aria-label="DESIGN"><span
+                          class="lineup-card-inner"><img src="images/lineup-design@2x.png" alt="DESIGN"></span></button>
+                      <button class="lineup-card logo-card" data-category="logo" aria-label="LOGO"><span
+                          class="lineup-card-inner"><img src="images/lineup-logo@2x.png" alt="LOGO"></span></button>
+                      <button class="lineup-card clone-card" data-category="clone" aria-label="CLONE CODING"><span
+                          class="lineup-card-inner"><img src="images/lineup-clone@2x.png"
+                            alt="CLONE CODING"></span></button>
+                      <button class="lineup-card web-card" data-category="web" aria-label="WEB DESIGN"><span
+                          class="lineup-card-inner"><img src="images/lineup-web@2x.png"
+                            alt="WEB DESIGN"></span></button>
+                      <button class="lineup-card app-card" data-category="app" aria-label="APP DESIGN"><span
+                          class="lineup-card-inner"><img src="images/lineup-app@2x.png"
+                            alt="APP DESIGN"></span></button>
+                      <button class="lineup-card contact-card" data-category="contact" aria-label="CONTACT"><span
+                          class="lineup-card-inner"><img src="images/lineup-contact@2x.png"
+                            alt="CONTACT"></span></button>
+                    </nav>
+                  </div>
+                </div>
+
+                <div class="list-mode" inert>
+                  <div class="list-caption">STARTING <img src="images/figma/5cba4.png" alt="Ⅵ"></div>
+                  <nav aria-label="카테고리 리스트"><button data-category="clone">CLONE CODING</button><button
+                      data-category="design">DESIGN</button><button data-category="web">WEB DESIGN</button><button
+                      data-category="logo">LOGO</button><button data-category="app">APP DESIGN</button><button
+                      data-category="contact">CONTACT</button></nav>
+                </div>
+              </div>
+            </div>
+
+            <!-- LIST 모드 -->
+            <aside class="profile" aria-label="서영민 선수 프로필">
+              <div class="profile-front profile-static">
+                <img class="flag" src="images/korea-flag.png" alt="대한민국 국기">
+                <h2>SEO<br>YEONGMIN</h2>
+                <span class="profile-rule" aria-hidden="true"></span>
+                <div class="profile-portrait" aria-hidden="true"></div>
+                <p class="profile-birthday"><strong>Date of birth</strong> : <span>2001/03/09</span></p>
+                <div class="profile-education">
+                  <strong>Education :</strong>
+                  <ul>
+                    <li>그린컴퓨터아트학원 <span>(2026.6 ~ 2026.10)</span></li>
+                    <li>학점은행제 학위 취득 <span>(2023.11 ~ 2026.8)</span></li>
+                    <li>동국대학교 WISE 캠퍼스 <span>(2020.3 ~ 2023.10)</span></li>
+                    <li>능인고등학교 졸업 <span>(2017.3 ~ 2020.3)</span></li>
+                  </ul>
+                </div>
+                <div class="profile-tools">
+                  <strong>Skills :</strong>
+                  <div class="profile-icons" aria-label="VS Code, Photoshop, Illustrator, Figma, GitHub">
+                    <span class="skill-item" role="img" tabindex="0"
+                      aria-label="Visual Studio Code: HTML · CSS · JavaScript"
+                      data-tooltip="HTML · CSS · JavaScript"><img src="images/skill-vscode.svg" alt=""></span>
+                    <span class="skill-item" role="img" tabindex="0" aria-label="Adobe Photoshop: Adobe Photoshop"
+                      data-tooltip="Adobe Photoshop"><img src="images/skill-photoshop.svg" alt=""></span>
+                    <span class="skill-item" role="img" tabindex="0" aria-label="Adobe Illustrator: Adobe Illustrator"
+                      data-tooltip="Adobe Illustrator"><img src="images/skill-illustrator.svg" alt=""></span>
+                    <span class="skill-item" role="img" tabindex="0" aria-label="Figma: Figma · UI/UX 디자인"
+                      data-tooltip="Figma · UI/UX 디자인"><img src="images/skill-figma.svg" alt=""></span>
+                    <span class="skill-item" role="img" tabindex="0" aria-label="GitHub: GitHub · 버전 관리"
+                      data-tooltip="GitHub · 버전 관리"><img src="images/skill-github.svg" alt=""></span>
+                  </div>
+                </div>
+              </div>
+            </aside>
+            <div class="lineup-controls"><button type="button" class="replay-intro">REPLAY INTRO ↻</button></div>
+          </div>
+        </div><!-- 라인업 영역 -->
+      </div><!-- 라인업 스크롤 영역 -->
+
+      <!-- 모바일 프로필 -->
+      <aside class="profile mobile-profile" aria-label="서영민 선수 프로필">
+        <div class="profile-front profile-static">
+          <img class="flag" src="images/korea-flag.png" alt="대한민국 국기">
+          <h2>SEO<br>YEONGMIN</h2>
+          <span class="profile-rule" aria-hidden="true"></span>
+          <div class="profile-portrait" aria-hidden="true"></div>
+          <p class="profile-birthday"><strong>Date of birth</strong> : <span>2001/03/09</span></p>
+          <div class="profile-education">
+            <strong>Education :</strong>
+            <ul>
+              <li>그린컴퓨터아트학원 <span>(2026.6 ~ 2026.10)</span></li>
+              <li>학점은행제 학위 취득 <span>(2023.11 ~ 2026.8)</span></li>
+              <li>동국대학교 WISE 캠퍼스 <span>(2020.3 ~ 2023.10)</span></li>
+              <li>능인고등학교 졸업 <span>(2017.3 ~ 2020.3)</span></li>
+            </ul>
+          </div>
+          <div class="profile-tools">
+            <strong>Skills :</strong>
+            <div class="profile-icons" aria-label="VS Code, Photoshop, Illustrator, Figma, GitHub">
+              <span class="skill-item" role="img" tabindex="0" aria-label="Visual Studio Code: HTML · CSS · JavaScript"
+                data-tooltip="HTML · CSS · JavaScript"><img src="images/skill-vscode.svg" alt=""></span>
+              <span class="skill-item" role="img" tabindex="0" aria-label="Adobe Photoshop: Adobe Photoshop"
+                data-tooltip="Adobe Photoshop"><img src="images/skill-photoshop.svg" alt=""></span>
+              <span class="skill-item" role="img" tabindex="0" aria-label="Adobe Illustrator: Adobe Illustrator"
+                data-tooltip="Adobe Illustrator"><img src="images/skill-illustrator.svg" alt=""></span>
+              <span class="skill-item" role="img" tabindex="0" aria-label="Figma: Figma · UI/UX 디자인"
+                data-tooltip="Figma · UI/UX 디자인"><img src="images/skill-figma.svg" alt=""></span>
+              <span class="skill-item" role="img" tabindex="0" aria-label="GitHub: GitHub · 버전 관리"
+                data-tooltip="GitHub · 버전 관리"><img src="images/skill-github.svg" alt=""></span>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- 프로젝트 상세 -->
+    <section id="projects" class="project-section" hidden aria-label="프로젝트 보기">
+      <div class="desktop-layout">
+        <img class="project-background" src="images/soccer-ball-large.png" alt="">
+        <button class="back-button" type="button">back to list <img src="images/back-arrow.svg" alt=""></button>
+
+        <!-- 프로젝트 카드 -->
+        <div class="project-grid" aria-label="프로젝트 목록"></div>
+
+        <aside class="project-info">
+          <h1 class="project-title"></h1>
+          <img class="title-line" src="images/white-line.svg" alt="">
+          <div class="info-box">
+            <div class="info-content" aria-live="polite"></div>
+            <button type="button" class="reset-button" hidden>선택 초기화 ↺</button>
+          </div>
+
+          <!-- 미니 전술판 -->
+          <nav class="mini-field" aria-label="카테고리 전술판">
+            <img class="mini-field-image" src="images/mini-field.svg" alt="">
+            <button data-category="design" style="--x:129px;--y:50px" aria-label="DESIGN"><img
+                src="images/field-point.svg" alt=""></button>
+            <button data-category="logo" style="--x:311px;--y:50px" aria-label="LOGO"><img src="images/field-point.svg"
+                alt=""></button>
+            <button data-category="clone" style="--x:220px;--y:105px" aria-label="CLONE CODING"><img
+                src="images/field-point.svg" alt=""></button>
+            <button data-category="web" style="--x:129px;--y:163px" aria-label="WEB DESIGN"><img
+                src="images/field-point.svg" alt=""></button>
+            <button data-category="app" style="--x:311px;--y:163px" aria-label="APP DESIGN"><img
+                src="images/field-point.svg" alt=""></button>
+            <button data-category="contact" style="--x:220px;--y:208px" aria-label="CONTACT"><img
+                src="images/field-point.svg" alt=""></button>
+            <img class="mini-ball" src="images/soccer-ball-small.png" alt="현재 카테고리">
+            <span class="mini-help">카테고리를 선택하세요</span>
+          </nav>
+        </aside>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact" hidden aria-label="Contact">
+      <div class="desktop-layout"><img class="project-background" src="images/soccer-ball-large.png" alt=""><button
+          type="button" class="back-button contact-back">back to list <img src="images/back-arrow.svg" alt=""></button>
+        <div class="contact-title">
+          <h1>READY<br>FOR THE<br>NEXT MATCH?</h1>
+        </div>
+        <aside class="project-info">
+          <h2 class="project-title">CONTACT</h2><img class="title-line" src="images/white-line.svg" alt="">
+          <div class="info-box contact-info">
+            <h2>서영민</h2><img class="info-line" src="images/white-line.svg" alt="">
+            <dl>
+              <dt>E-mail</dt>
+              <dd><a href="mailto:sym4352@naver.com">sym4352@naver.com ↗</a><button class="copy-email"
+                  aria-label="이메일 복사">COPY</button></dd>
+              <dt>Phone</dt>
+              <dd><a href="tel:01039384352">010-3938-4352 ↗</a></dd>
+              <dt>Portfolio</dt>
+              <dd><a href="https://app.notion.com/p/3d122e626d5381d2ac04d99caa6fd77a" target="_blank"
+                  rel="noopener noreferrer">NOTION ↗</a><a href="https://github.com/batteri-333" target="_blank"
+                  rel="noopener noreferrer">GITHUB ↗</a></dd>
+            </dl>
+            <p>함께할 프로젝트와 좋은 팀을 기다리고 있습니다.</p>
+          </div>
+          <nav class="mini-field" aria-label="카테고리 전술판">
+            <img class="mini-field-image" src="images/mini-field.svg" alt="">
+            <button data-category="design" style="--x:129px;--y:50px" aria-label="DESIGN"><img
+                src="images/field-point.svg" alt=""></button>
+            <button data-category="logo" style="--x:311px;--y:50px" aria-label="LOGO"><img src="images/field-point.svg"
+                alt=""></button>
+            <button data-category="clone" style="--x:220px;--y:105px" aria-label="CLONE CODING"><img
+                src="images/field-point.svg" alt=""></button>
+            <button data-category="web" style="--x:129px;--y:163px" aria-label="WEB DESIGN"><img
+                src="images/field-point.svg" alt=""></button>
+            <button data-category="app" style="--x:311px;--y:163px" aria-label="APP DESIGN"><img
+                src="images/field-point.svg" alt=""></button>
+            <button data-category="contact" style="--x:220px;--y:208px" aria-label="CONTACT"><img
+                src="images/field-point.svg" alt=""></button>
+            <img class="mini-ball" src="images/soccer-ball-small.png" alt="현재 카테고리">
+            <span class="mini-help">카테고리를 선택하세요</span>
+          </nav>
+        </aside>
+        <div class="contact-welcome" aria-hidden="true"><strong>I'M READY<br>FOR THE NEXT MATCH!</strong></div>
+      </div>
+    </section>
+
+  </main>
+  <dialog class="artwork-dialog" aria-label="작품 이미지 크게 보기"><button class="artwork-close" aria-label="이미지 닫기">CLOSE
+      ×</button>
+    <div class="artwork-content"></div>
+  </dialog>
+  <div class="notice" role="status"></div>
+</body>
+
+</html>

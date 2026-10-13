@@ -1,0 +1,40 @@
+/* 라인업 전환 */
+
+@media (min-width: 901px) {
+  .lineup-section .desktop-layout::after {
+    left: var(--lineup-panel-left, 1317px);
+    width: var(--lineup-panel-width, 603px);
+    border-radius: var(--lineup-panel-radius, 80px) 0 0 var(--lineup-panel-radius, 80px);
+    opacity: 1;
+    will-change: left, width, border-radius;
+  }
+
+  /* 기존 CSS의 */
+  .lineup-section .lineup-white-screen {
+    display: none !important;
+  }
+  .lineup-section .lineup-big-title {
+    background: transparent;
+    color: #fff;
+  }
+  .lineup-section .lineup-scroll-hint {
+    color: rgba(255, 255, 255, .8);
+  }
+
+  /* 색상 */
+}
+
+/* 반응형 */
+
+@media (max-width: 900px) {
+  .lineup-section .lineup-white-screen {
+    display: none !important;
+  }
+  .lineup-section .lineup-big-title {
+    background: linear-gradient(156.7825deg, #0b42aa 0%, #171e2c 107.36%);
+    color: #fff;
+  }
+  .lineup-section .lineup-scroll-hint {
+    color: rgba(255, 255, 255, .85);
+  }
+}

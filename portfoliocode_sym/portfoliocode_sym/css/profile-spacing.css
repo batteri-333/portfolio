@@ -1,0 +1,113 @@
+/* 프로필 간격 */
+
+@media (min-width: 901px) {
+  /* 헤더 */
+  .lineup-section .desktop-layout .profile-front .flag {
+    top: 86px;
+  }
+  .lineup-section .desktop-layout .profile-front h2 {
+    top: 126px;
+  }
+  .lineup-section .desktop-layout .profile-front .profile-rule {
+    top: 266px;
+  }
+
+  /* 위치 */
+  .lineup-section .desktop-layout .profile-front .profile-portrait {
+    left: 119px;
+    top: 290px;
+    width: 240px;
+    height: 311.2px;
+  }
+
+  /* 사진 */
+  .lineup-section .desktop-layout .profile-front .profile-birthday {
+    top: 634px;
+  }
+
+  /* 학력 */
+  .lineup-section .desktop-layout .profile-front .profile-education {
+    top: 690px;
+    left: 126px;
+    width: 460px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+  }
+  .lineup-section .desktop-layout .profile-education ul {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 16px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    line-height: 1.35;
+  }
+  .lineup-section .desktop-layout .profile-education li {
+    min-width: 0;
+    margin: 0;
+    font-size: 15px;
+    text-align: left;
+  }
+  .lineup-section .desktop-layout .profile-education li span {
+    margin-top: 4px;
+    font-size: 14px;
+    opacity: .84;
+  }
+
+  /* 스킬 */
+  .lineup-section .desktop-layout .profile-front .profile-tools {
+    top: 880px;
+  }
+}
+
+/* 반응형 */
+
+@media (max-width: 900px) {
+  .lineup-section .mobile-profile .profile-front .profile-education {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 11px;
+    width: 100%;
+    margin-bottom: 22px;
+  }
+  .lineup-section .mobile-profile .profile-education ul {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 14px;
+    row-gap: 15px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 13px;
+    line-height: 1.4;
+  }
+  .lineup-section .mobile-profile .profile-education li {
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    overflow-wrap: break-word;
+    word-break: keep-all;
+  }
+  .lineup-section .mobile-profile .profile-education li span {
+    display: block;
+    margin-top: 4px;
+    white-space: normal;
+    font-size: 12px;
+    opacity: .84;
+  }
+}
+
+@media (max-width: 380px) {
+  .lineup-section .mobile-profile .profile-education ul {
+    column-gap: 10px;
+    font-size: 12px;
+  }
+  .lineup-section .mobile-profile .profile-education li span {
+    font-size: 11px;
+  }
+}

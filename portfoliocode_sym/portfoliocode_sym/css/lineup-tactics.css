@@ -1,0 +1,71 @@
+/* SVG 전술판 */
+.lineup-section .lineup-big-title .lineup-tactics-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+  opacity: .60;
+  pointer-events: none;
+  will-change: opacity;
+}
+
+.lineup-section .lineup-tactics-svg .tactic-draw {
+  fill: none;
+  stroke: #8EBAE9;
+  stroke-width: 2.3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+
+  /* 애니메이션 */
+  stroke-dasharray: 3000;
+  stroke-dashoffset: 3000;
+}
+
+.lineup-section .lineup-tactics-svg .tactic-outline {
+  stroke-width: 2.6;
+}
+
+.lineup-section .lineup-tactics-svg .tactic-mark {
+  stroke: #9FC8EC;
+  stroke-width: 2.8;
+}
+
+.lineup-section .lineup-tactics-svg .tactic-route,
+.lineup-section .lineup-tactics-svg .tactic-arrow {
+  stroke: #D5EDFF;
+}
+
+.lineup-section .lineup-tactics-svg .tactic-arrow {
+  stroke-width: 2.5;
+}
+
+.lineup-section .lineup-tactics-svg .route-dash {
+  stroke-dasharray: 9 11;
+}
+
+.lineup-section .lineup-big-title > .lineup-intro-content {
+  position: relative;
+  z-index: 2;
+}
+
+.lineup-section .lineup-big-title > .lineup-scroll-hint {
+  /* 애니메이션 */
+  z-index: 2;
+}
+
+/* 반응형 */
+
+@media (max-width: 900px) {
+  .lineup-section .lineup-big-title .lineup-tactics-svg {
+    opacity: .27;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lineup-section .lineup-tactics-svg .tactic-draw {
+    stroke-dashoffset: 0;
+    stroke-dasharray: none;
+  }
+}

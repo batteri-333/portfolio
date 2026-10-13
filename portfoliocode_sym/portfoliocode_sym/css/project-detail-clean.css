@@ -1,0 +1,90 @@
+/* 프로젝트 상세 */
+.info-box.has-detail {
+  padding: 24px 24px 36px;
+}
+
+.project-overview {
+  margin-top: 17px;
+}
+
+.project-overview .overview-label {
+  font: 700 15px/1.4 Inter,PlexKR,sans-serif;
+  letter-spacing: .01em;
+  margin: 0 0 10px;
+}
+
+.project-overview .overview-heading {
+  font: 700 20px/1.42 Inter,PlexKR,sans-serif;
+  margin: 0 0 10px;
+  letter-spacing: -.03em;
+  overflow-wrap: anywhere;
+}
+
+.info-content .project-overview .overview-body {
+  margin: 0;
+  font: 400 15px/1.65 PlexKR,Inter,sans-serif;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+.info-box.has-detail .detail-footer {
+  margin-top: 16px;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* 스크롤 */
+.artwork-dialog {
+  padding: 22px 26px 26px;
+}
+
+.artwork-dialog .artwork-close {
+  position: static;
+  float: none;
+  display: block;
+  width: max-content;
+  margin: 0 0 20px auto;
+  padding: 7px 8px;
+  background: transparent;
+  color: #fff;
+  z-index: auto;
+}
+
+/* 로고 */
+.artwork-content img.quiet-butter-white {
+  background-color: #fff;
+}
+
+@media (max-width: 900px) {
+  .info-box.has-detail {
+    padding: 22px 20px 40px;
+  }
+  .project-overview {
+    margin-top: 14px;
+  }
+  .project-overview .overview-heading {
+    font-size: 19px;
+  }
+  .info-content .project-overview .overview-body {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  .artwork-dialog {
+    padding: 16px 14px 14px;
+  }
+  .artwork-dialog .artwork-close {
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 500px) {
+  .info-box.has-detail {
+    padding: 20px 18px 40px;
+  }
+  .project-overview .overview-heading {
+    font-size: 18px;
+  }
+  .info-content .project-overview .overview-body {
+    font-size: 13px;
+  }
+}

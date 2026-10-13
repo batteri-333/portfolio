@@ -1,0 +1,89 @@
+/* 라인업 스타일 */
+
+/* 카드 */
+.lineup-section .board-flip {
+  will-change: transform;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.lineup-section .formation-view,
+.lineup-section .list-mode {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+@media (min-width: 901px) {
+  /* 리스트 */
+  .lineup-section .lineup-board,
+  .lineup-section .lineup-board.show-list {
+    left: 100px;
+    top: 194px;
+    width: 1102px;
+    height: 692px;
+  }
+
+  /* 프로필 */
+  .lineup-section.has-list .desktop-layout::after {
+    left: 1317px;
+    top: 0;
+    width: 603px;
+  }
+  .lineup-section.has-list .desktop-layout .profile {
+    left: 1317px;
+    top: 0;
+    width: 603px;
+  }
+  .lineup-section.has-list .desktop-layout .profile-front>* {
+    margin-left: 0;
+  }
+  .lineup-section.has-list .desktop-layout .profile-front::after {
+    left: 126px;
+  }
+  .lineup-section.has-list .desktop-layout .profile-skills {
+    padding: 120px 74px 80px;
+  }
+
+  /* 크기 */
+  .lineup-section .lineup-controls {
+    left: 118px;
+
+    /* 버튼 */
+    top: min(1020px, calc(var(--visible-canvas-height, 1080px) - 43px));
+    gap: 0;
+    z-index: 9;
+  }
+  .lineup-section .replay-intro {
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.25;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 900px) {
+  /* 반응형 */
+  .lineup-section .lineup-board,
+  .lineup-section .lineup-board.show-list {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: 90%;
+    height: 58vw;
+    min-height: 275px;
+    margin: 24px 5% 0;
+  }
+  .lineup-section .lineup-controls {
+    margin-top: 32px;
+    margin-bottom: 12px;
+  }
+}
+
+@media (max-width: 500px) {
+  .lineup-section .lineup-board,
+  .lineup-section .lineup-board.show-list {
+    height: 65vw;
+    min-height: 250px;
+    margin-top: 27px;
+  }
+}
