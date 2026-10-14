@@ -138,6 +138,7 @@ a:focus-visible {
   height: 47px;
   padding: 0;
   border: 1px solid #111;
+  border-bottom: 1px solid #111;
   gap: 0;
 }
 
