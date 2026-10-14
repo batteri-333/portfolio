@@ -19,7 +19,7 @@ const categories = {
         }
       },
       {
-        "name": "픽베이크",
+        "name": "픽베이크 카드뉴스",
         "image": "design-pickbake.png",
         "crop": {
           "width": "113.98%",
@@ -29,7 +29,7 @@ const categories = {
         }
       },
       {
-        "name": "국일",
+        "name": "국일 상세페이지",
         "image": "design-gukil.png",
         "crop": {
           "width": "112.33%",
@@ -39,7 +39,7 @@ const categories = {
         }
       },
       {
-        "name": "우르오스",
+        "name": "우르오스 상세페이지",
         "image": "design-uruos.png",
         "crop": {
           "width": "109.31%",

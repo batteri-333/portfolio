@@ -133,12 +133,11 @@ a:focus-visible {
 
 .view-buttons {
   left: 1101px;
-  top: 147px;
+  top: 134px;
   width: 48px;
   height: 47px;
   padding: 0;
   border: 1px solid #111;
-  border-bottom: 0;
   gap: 0;
 }
 
@@ -789,7 +788,7 @@ a:focus-visible {
     font-size: 11px;
   }
   .view-buttons {
-    top: 48px;
+    top: 35px;
     left: auto;
     right: 6%;
     transform: scale(.72);
@@ -1120,7 +1119,7 @@ a:focus-visible {
     padding-top: 27px;
   }
   .view-buttons {
-    top: 38px;
+    top: 25px;
   }
   .lineup-board {
     margin-top: 27px;
